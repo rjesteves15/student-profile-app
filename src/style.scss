@@ -1,0 +1,24 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #3C4048;
+}
+
+
+.mainContainer {
+  .section {
+    display: flex;
+    .leftContainer {
+      width: 40%;
+      height: 80vh;
+    }
+    .rightContainer {
+      width: 60%;
+      height: 80vh;
+    }
+  }
+}
