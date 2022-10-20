@@ -1,16 +1,23 @@
 
 .registrationForm {
-    background-color: aqua;
+    background-color: #fff;
+    box-shadow: 5px 5px 10px #000;
+    border-radius: 10px;
     margin: 10px;
     align-items: center;
     justify-content: center;
     text-align: justify;
     padding: 20px;
+    height: 97.5%;
     h1 {
-        color: #fff;
+        color: #ff0099;
         text-align: center;
     }
 
+    label {
+        color: #ff0099;
+        font-weight: bold;
+    }
     section {
         margin-bottom: 10px;
     }
@@ -27,8 +34,12 @@
         display: flex;
         
         input {
-            height: 50px;
+            height: 5vh;
             width: 100%;
+            background-color:  #ff0099;
+            border: none;
+            color: #fff;
+            border-radius: 5px;
         }
     }
  

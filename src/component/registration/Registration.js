@@ -78,13 +78,13 @@ const handleSubmit = (e) => {
             <label>Course: </label>
             <section>
             <select className='inputValue' id="courses">  
-                <option value = "BMW" id="course1"> Computer Science/Programming  
+                <option value = "Computer Science/Programming" id="course1"> Computer Science/Programming  
                 </option>  
-                <option value = "Mercedes" id="course2"> Civil Engineering   
+                <option value = "Civil Engineering" id="course2"> Civil Engineering   
                 </option>  
-                <option value = "Audi" id="course3"> Medical and healthcare
+                <option value = "Medical and healthcare" id="course3"> Medical and healthcare
                 </option>  
-                <option value = "Skoda" id="course4"> Commerce or Economics  
+                <option value = "Commerce or Economics" id="course4"> Commerce or Economics  
                 </option>  
                 </select>
             </section>
@@ -92,9 +92,9 @@ const handleSubmit = (e) => {
             
             <section className='gender'>
             <label>Gender: </label>
-                <input type="radio" id="male"  value="male" name="gender"/>
+                <input type="radio" id="gender"  value="male" name="gender"/>
                 <label htmlFor="male">Male</label>
-                <input type="radio" id="female" value="female" name="gender" />
+                <input type="radio" id="gender" value="female" name="gender" />
                 <label htmlFor="female">Female</label>
             </section>
             
