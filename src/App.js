@@ -26,7 +26,13 @@ const App = () => {
       window.alert("NOT FOUND");
     }
   };
-  
+
+  //Reset Search Data
+  const handleReset = (e) => {
+    setSearchData([]);
+    setSearch([]);
+  }
+
   //Detele Functionality
   const handleDelete = (id) => {
       setData(data.filter((data) => data.id !== id))
@@ -34,7 +40,7 @@ const App = () => {
 
   return (
     <div className="mainContainer">
-      <Header search={search} setSearch={setSearch} data={data} searchData={searchData} setSearchData={setSearchData} handleSearch={handleSearch}/>
+      <Header search={search} setSearch={setSearch} handleSearch={handleSearch} handleReset={handleReset}/>
       <div className="section">
           <div className="leftContainer">
              <Registration data={data} setData={setData} file={file} setFile={setFile}/>
