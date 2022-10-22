@@ -1,23 +1,12 @@
 import React from 'react';
 import '../header/header.scss'
 
-function header({data, setData, search, setSearch, searchData, setSearchData}) {
+function header({handleSearch, search, setSearch}) {
 
-  const handleSearch = () => {
-    if (search.length !== 0) {
-      const found = data.filter((info) => info.firstName.includes(search));
-      setSearchData(found);
-      if (found.length === 0) {
-        window.alert("NOT FOUND");
-      }
-    }
-    if (search.length === 0) {
-      window.alert("NOT FOUND");
-    }
-  };
+
   return (
     <div className='header'>
-        <input type="text" /> 
+        <input type="text" value={search} onChange={(e) => setSearch(e.target.value)} /> 
         <button onClick={handleSearch}>Search</button>
         <button>Reset</button>
     </div>

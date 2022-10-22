@@ -11,26 +11,30 @@ const App = () => {
   const [file, setFile] = useState();
   const [search, setSearch] = useState("");
   const [searchData, setSearchData] = useState([]);
-  // const [editData, setEditdata] = useState({
-  //       id: e.target[0].id,
-  //       firstName: e.target[1].firstName,
-  //       lastName: e.target[2].lastName,
-  //       email: e.target[3].email,
-  //       contact: e.target[4].contact,
-  //       courses: e.target[5].courses,
-  //       gender: e.target[6].gender,
-  //       gender: e.target[7].gender,
-  //       file: e.target[8].file,
 
-  // })
 
+  //Search Data Functionality
+  const handleSearch = () => {
+    if (search.length !== 0) {
+      const found = data.filter((info) => info.firstName.includes(search));
+      setSearchData(found);
+      if (found.length === 0) {
+        window.alert("NOT FOUND");
+      }
+    }
+    if (search.length === 0) {
+      window.alert("NOT FOUND");
+    }
+  };
+  
+  //Detele Functionality
   const handleDelete = (id) => {
       setData(data.filter((data) => data.id !== id))
   }
 
   return (
     <div className="mainContainer">
-      <Header search={search} setSearch={setSearch} data={data} searchData={searchData} setSearchData={setSearchData}/>
+      <Header search={search} setSearch={setSearch} data={data} searchData={searchData} setSearchData={setSearchData} handleSearch={handleSearch}/>
       <div className="section">
           <div className="leftContainer">
              <Registration data={data} setData={setData} file={file} setFile={setFile}/>
